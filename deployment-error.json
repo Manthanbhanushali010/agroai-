@@ -1,0 +1,7 @@
+{
+  "error": "Cannot read properties of undefined (reading 'formatEther')",
+  "stack": "TypeError: Cannot read properties of undefined (reading 'formatEther')\n    at main (/Users/manthanbhanushali/Desktop/cursor 28 june/agro ai ultimate /AGROAI_ULTIMATE_MEGA_PACKAGE/scripts/deploy.js:108:54)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "timestamp": "2025-06-30T00:54:54.839Z",
+  "network": "sepolia",
+  "deployer": "0xE1A70fe5807fD64c3341212cF3F9Fe117300c34E"
+}

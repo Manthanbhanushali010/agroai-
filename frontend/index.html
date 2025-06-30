@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroAI - Smart Agriculture Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        .upload-section {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+        .upload-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .upload-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+        }
+        .status.success { background: rgba(76, 175, 80, 0.3); }
+        .status.error { background: rgba(244, 67, 54, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 AgroAI</h1>
+        <div class="subtitle">Smart Agriculture Platform with Blockchain Integration</div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🤖 AI-Powered Disease Detection</h3>
+                <p>Upload photos of your crops and get instant disease detection using advanced machine learning models.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⛓️ Blockchain Integration</h3>
+                <p>All predictions and data are stored on the blockchain for transparency and immutability.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎁 Token Rewards</h3>
+                <p>Earn AgroAI tokens for contributing data and participating in the ecosystem.</p>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <h2>Upload Crop Photo</h2>
+            <p>Get instant disease detection and earn rewards!</p>
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            <button class="upload-btn" onclick="document.getElementById('photoInput').click()">
+                📸 Choose Photo
+            </button>
+            <div id="status" class="status" style="display: none;"></div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>📊 Real-time Analytics</h3>
+                <p>Track your farming performance and get insights from blockchain data.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌐 Decentralized</h3>
+                <p>Built on Ethereum with Chainlink for reliable data and automation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Secure</h3>
+                <p>Your data is encrypted and stored securely on IPFS and blockchain.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('photoInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                uploadPhoto(file);
+            }
+        });
+
+        async function uploadPhoto(file) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.style.display = 'block';
+            statusDiv.className = 'status';
+            statusDiv.textContent = 'Uploading and analyzing...';
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://localhost:5001/api/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                
+                if (response.ok) {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = `
+                        <h4>Analysis Complete!</h4>
+                        <p><strong>Crop Type:</strong> ${result.crop_type}</p>
+                        <p><strong>Health Status:</strong> ${result.is_healthy ? 'Healthy' : 'Disease Detected'}</p>
+                        <p><strong>Confidence:</strong> ${result.confidence}%</p>
+                        <p><strong>Disease:</strong> ${result.disease || 'None'}</p>
+                    `;
+                } else {
+                    throw new Error(result.error || 'Upload failed');
+                }
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        // Test backend connection
+        async function testBackend() {
+            try {
+                const response = await fetch('http://localhost:5001/api/health');
+                const data = await response.json();
+                console.log('Backend Status:', data);
+            } catch (error) {
+                console.error('Backend connection failed:', error);
+            }
+        }
+
+        // Test on page load
+        testBackend();
+    </script>
+</body>
+</html> 

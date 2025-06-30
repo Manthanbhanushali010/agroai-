@@ -1,0 +1,11 @@
+2025-06-30 03:21:03,434 - enhanced_backend_complete - ERROR - Failed to initialize Web3: Non-hexadecimal digit found
+2025-06-30 03:21:03,853 - enhanced_backend_complete - ERROR - Failed to initialize IPFS: HTTPError: 401 Client Error: Unauthorized for url: https://ipfs.infura.io:5001/api/v0/version?stream-channels=true
+2025-06-30 03:21:03,856 - enhanced_backend_complete - WARNING - AI model not found, using mock predictions
+2025-06-30 03:23:59,558 - enhanced_backend_complete - ERROR - Failed to initialize Web3: Non-hexadecimal digit found
+2025-06-30 03:24:00,003 - enhanced_backend_complete - ERROR - Failed to initialize IPFS: HTTPError: 401 Client Error: Unauthorized for url: https://ipfs.infura.io:5001/api/v0/version?stream-channels=true
+2025-06-30 03:24:00,016 - enhanced_backend_complete - WARNING - AI model not found, using mock predictions
+2025-06-30 03:24:00,043 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.18:5001
+2025-06-30 03:24:00,043 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

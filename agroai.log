@@ -1,0 +1,34 @@
+2025-06-30 03:25:48,368 - enhanced_backend_complete - ERROR - Failed to load contract: [Errno 2] No such file or directory: 'config/contract-config.json'
+2025-06-30 03:25:49,028 - enhanced_backend_complete - INFO - Web3 initialized successfully. Network: 11155111
+2025-06-30 03:25:49,457 - enhanced_backend_complete - ERROR - Failed to initialize IPFS: HTTPError: 401 Client Error: Unauthorized for url: https://ipfs.infura.io:5001/api/v0/version?stream-channels=true
+2025-06-30 03:25:49,458 - enhanced_backend_complete - WARNING - AI model not found, using mock predictions
+2025-06-30 03:25:49,467 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.18:5001
+2025-06-30 03:25:49,467 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 03:28:19,342 - enhanced_backend_complete - ERROR - Failed to load contract: [Errno 2] No such file or directory: 'config/contract-config.json'
+2025-06-30 03:28:19,449 - enhanced_backend_complete - INFO - Web3 initialized successfully. Network: 11155111
+2025-06-30 03:28:19,870 - enhanced_backend_complete - ERROR - Failed to initialize IPFS: HTTPError: 401 Client Error: Unauthorized for url: https://ipfs.infura.io:5001/api/v0/version?stream-channels=true
+2025-06-30 03:28:19,872 - enhanced_backend_complete - WARNING - AI model not found, using mock predictions
+2025-06-30 03:28:19,881 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.18:5001
+2025-06-30 03:28:19,881 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 03:28:23,836 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:28:23] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:30:48,308 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:30:48] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:31:53,038 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:31:53] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:33:12,045 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:33:12] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:33:17,549 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:33:17] "GET /api/blockchain-status HTTP/1.1" 200 -
+2025-06-30 03:35:13,789 - enhanced_backend_complete - ERROR - Failed to load contract: 'address'
+2025-06-30 03:35:13,886 - enhanced_backend_complete - INFO - Web3 initialized successfully. Network: 11155111
+2025-06-30 03:35:14,297 - enhanced_backend_complete - ERROR - Failed to initialize IPFS: HTTPError: 401 Client Error: Unauthorized for url: https://ipfs.infura.io:5001/api/v0/version?stream-channels=true
+2025-06-30 03:35:14,298 - enhanced_backend_complete - WARNING - AI model not found, using mock predictions
+2025-06-30 03:35:18,340 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:35:18] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:35:22,061 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:35:22] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:35:22,281 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:35:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-30 03:37:52,197 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:37:52] "GET /api/health HTTP/1.1" 200 -
+2025-06-30 03:40:18,663 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:40:18] "POST /api/predict HTTP/1.1" 200 -
+2025-06-30 03:46:35,641 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:46:35] "[33mPOST /api/detect-enhanced HTTP/1.1[0m" 404 -
+2025-06-30 03:47:46,279 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:47:46] "[35m[1mPOST /api/upload-photo-blockchain HTTP/1.1[0m" 500 -

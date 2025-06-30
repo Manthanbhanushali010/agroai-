@@ -1,0 +1,133 @@
+{
+  "name": "agroai-blockchain-platform",
+  "version": "1.0.0",
+  "description": "AgroAI - Blockchain-powered agricultural disease detection platform with Chainlink integration",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy-local": "npx hardhat run scripts/deploy.js --network localhost",
+    "test": "npx hardhat test",
+    "test-deployment": "npx hardhat run scripts/test-deployment.js --network sepolia",
+    "verify": "npx hardhat verify --network sepolia",
+    "node": "npx hardhat node",
+    "clean": "npx hardhat clean",
+    "coverage": "npx hardhat coverage",
+    "size": "npx hardhat size-contracts",
+    "gas-report": "REPORT_GAS=true npx hardhat test",
+    "lint": "npx eslint . --ext .js,.ts",
+    "lint:fix": "npx eslint . --ext .js,.ts --fix",
+    "format": "npx prettier --write .",
+    "setup": "npm install && npx hardhat compile",
+    "start-backend": "cd backend && python app.py",
+    "start-frontend": "cd frontend && python -m http.server 8000",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "build": "npm run compile && npm run test",
+    "deploy-testnet": "npm run compile && npm run deploy",
+    "full-setup": "npm run setup && npm run deploy-local && npm run test-deployment"
+  },
+  "keywords": [
+    "blockchain",
+    "agriculture",
+    "chainlink",
+    "defi",
+    "ai",
+    "disease-detection",
+    "nft",
+    "ethereum",
+    "web3",
+    "hackathon"
+  ],
+  "author": "AgroAI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agroai/blockchain-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agroai/blockchain-platform/issues"
+  },
+  "homepage": "https://agroai.io",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "@types/chai": "^4.3.6",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.5.9",
+    "chai": "^4.3.8",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "hardhat": "^2.17.2",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^3.0.3",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.4",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.8.0",
+    "@chainlink/functions-toolkit": "^0.3.2",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "web3": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/agroai"
+  },
+  "config": {
+    "networks": {
+      "sepolia": {
+        "chainId": 11155111,
+        "rpcUrl": "https://sepolia.infura.io/v3/YOUR_INFURA_KEY",
+        "blockExplorer": "https://sepolia.etherscan.io"
+      },
+      "polygon": {
+        "chainId": 137,
+        "rpcUrl": "https://polygon-rpc.com",
+        "blockExplorer": "https://polygonscan.com"
+      },
+      "mumbai": {
+        "chainId": 80001,
+        "rpcUrl": "https://rpc-mumbai.maticvigil.com",
+        "blockExplorer": "https://mumbai.polygonscan.com"
+      }
+    }
+  },
+  "hardhat": {
+    "defaultNetwork": "sepolia",
+    "gasReporter": {
+      "enabled": true,
+      "currency": "USD",
+      "gasPrice": 20,
+      "coinmarketcap": "YOUR_CMC_API_KEY"
+    },
+    "contractSizer": {
+      "alphaSort": true,
+      "runOnCompile": true,
+      "disambiguatePaths": false
+    }
+  }
+}

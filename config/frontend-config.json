@@ -1,0 +1,51 @@
+{
+  "contracts": {
+    "agroai_core": "0xF69bDB0bBe61b0a6be59acCde4361e5CF9ff8bAd",
+    "agroai_token": "0xF69bDB0bBe61b0a6be59acCde4361e5CF9ff8bAd"
+  },
+  "chainlink": {
+    "vrf": {
+      "subscription_id": "1234567890",
+      "coordinator": "0x50AE5Ea9C0C4Bd0F0a4C4B6C7C8C9D0E1F2A3B4C",
+      "key_hash": "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
+    },
+    "functions": {
+      "subscription_id": "1234567890",
+      "router": "0x6E2dc0F9DB014aE19888F539E59285D2EA235a9C",
+      "don_id": "0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000"
+    }
+  },
+  "network": {
+    "chain_id": 11155111,
+    "name": "Sepolia",
+    "rpc_url": "https://sepolia.infura.io/v3/YOUR_PROJECT_ID"
+  },
+  "api": {
+    "base_url": "http://localhost:5001",
+    "endpoints": {
+      "health": "/api/health",
+      "predict": "/api/predict",
+      "upload_blockchain": "/api/upload-photo-blockchain",
+      "user_stats": "/api/user-stats",
+      "purchase": "/api/purchase"
+    }
+  },
+  "rewards": {
+    "photo": 5,
+    "disease": 100,
+    "earlyDetection": 200,
+    "healthy": 20,
+    "referral": 50,
+    "treatmentSuccess": 150
+  },
+  "purchase": {
+    "discountRate": 20,
+    "cashbackRate": 10
+  },
+  "tiers": {
+    "tier1": 100,
+    "tier2": 500,
+    "tier3": 1000,
+    "tier4": 5000
+  }
+} 
