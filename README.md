@@ -1,5 +1,7 @@
 # 🌱 AgroAI - Smart Agriculture Platform
 
+> **Built for Chromion Chainlink Hackathon** 🏆
+
 A comprehensive blockchain-powered agriculture platform that combines AI/ML disease detection with decentralized technology for transparent, secure, and rewarding farming practices.
 
 ## 🚀 Features
@@ -316,4 +318,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Built with ❤️ for the future of agriculture**
-
