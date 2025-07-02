@@ -32,3 +32,8 @@
 2025-06-30 03:40:18,663 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:40:18] "POST /api/predict HTTP/1.1" 200 -
 2025-06-30 03:46:35,641 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:46:35] "[33mPOST /api/detect-enhanced HTTP/1.1[0m" 404 -
 2025-06-30 03:47:46,279 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 03:47:46] "[35m[1mPOST /api/upload-photo-blockchain HTTP/1.1[0m" 500 -
+2025-06-30 04:23:10,223 - werkzeug - INFO - 127.0.0.1 - - [30/Jun/2025 04:23:10] "GET /api/health HTTP/1.1" 200 -
+2025-07-01 12:34:44,824 - werkzeug - INFO - 127.0.0.1 - - [01/Jul/2025 12:34:44] "GET /api/health HTTP/1.1" 200 -
+2025-07-01 20:55:52,426 - werkzeug - INFO - 127.0.0.1 - - [01/Jul/2025 20:55:52] "GET /api/health HTTP/1.1" 200 -
+2025-07-01 20:56:04,038 - werkzeug - INFO - 127.0.0.1 - - [01/Jul/2025 20:56:04] "POST /api/predict HTTP/1.1" 200 -
+2025-07-02 16:36:15,831 - werkzeug - INFO - 127.0.0.1 - - [02/Jul/2025 16:36:15] "GET /api/health HTTP/1.1" 200 -
